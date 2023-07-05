@@ -14,10 +14,10 @@ items:
       local: false
     tags:
     - annotations:
-        openshift.io/imported-from: registry.redhat.io/rhscl/httpd-24-rhel7
+            openshift.io/imported-from: registry.access.redhat.com/rhscl/httpd-24-rhel7:2.4-195
       from:
         kind: DockerImage
-        name: registry.redhat.io/rhscl/httpd-24-rhel7
+        name: registry.access.redhat.com/rhscl/httpd-24-rhel7:2.4-195
       generation: null
       importPolicy: {}
       name: latest
