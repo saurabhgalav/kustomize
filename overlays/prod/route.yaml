@@ -8,11 +8,11 @@ metadata:
     app: myweb
     app.kubernetes.io/instance: webapp
   name: myweb
-  namespace: demo
+  namespace:
   resourceVersion: "109607"
   uid: 1afc7624-0880-4d40-be18-7168192da36d
 spec:
-  host: myweb-demo.apps.ocp4.example.com
+  host: myweb-prod.apps.ocp4.example.com
   port:
     targetPort: 8080-tcp
   to:
