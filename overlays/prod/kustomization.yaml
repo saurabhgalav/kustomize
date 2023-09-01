@@ -1,5 +1,4 @@
 bases:
 - ../../base
 patches:
-- route.yaml
 - replica.yaml  
