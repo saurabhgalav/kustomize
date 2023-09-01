@@ -3,14 +3,10 @@ kind: Route
 metadata:
   annotations:
     openshift.io/host.generated: "true"
-  creationTimestamp: "2023-09-01T05:30:09Z"
   labels:
     app: myweb
     app.kubernetes.io/instance: webapp
   name: myweb
-  namespace:
-  resourceVersion: "109607"
-  uid: 1afc7624-0880-4d40-be18-7168192da36d
 spec:
   host: myweb-prod.apps.ocp4.example.com
   port:
