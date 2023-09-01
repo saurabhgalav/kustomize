@@ -1,0 +1,23 @@
+apiVersion: route.openshift.io/v1
+kind: Route
+metadata:
+  annotations:
+    openshift.io/host.generated: "true"
+  creationTimestamp: "2023-09-01T05:30:09Z"
+  labels:
+    app: myweb
+    app.kubernetes.io/instance: webapp
+  name: myweb
+  namespace: demo
+  resourceVersion: "109607"
+  uid: 1afc7624-0880-4d40-be18-7168192da36d
+spec:
+  host: myweb-demo.apps.ocp4.example.com
+  port:
+    targetPort: 8080-tcp
+  to:
+    kind: Service
+    name: myweb
+    weight: 100
+  wildcardPolicy: None
+status: {}
