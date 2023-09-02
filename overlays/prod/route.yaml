@@ -1,12 +1,10 @@
 apiVersion: route.openshift.io/v1
 kind: Route
 metadata:
-  annotations:
-    openshift.io/host.generated: "true"
   labels:
     app: myweb
     app.kubernetes.io/instance: myweb
-  name: myweb
+  name: myweb1
 spec:
   host: myweb-prod.apps.ocp4.example.com
   port:
