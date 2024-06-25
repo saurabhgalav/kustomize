@@ -1,0 +1,57 @@
+apiVersion: template.openshift.io/v1
+kind: Template
+objects:
+- apiVersion: build.openshift.io/v1
+  kind: BuildConfig
+  metadata:
+    name: ocpdemo
+    namespace: cp-5276646
+    labels: 
+      app: ocpdemo
+  spec:
+    output:
+      to:
+        kind: ImageStreamTag
+        name: "ocpdemo:latest"
+    source:
+      contextDir: php-helloworld
+      git:
+        uri: https://github.com/saurabhgalav/DO180-apps
+      type: Git
+    strategy:
+      sourceStrategy:
+        forcePull: true
+        from:
+          kind: ImageStreamTag
+          name: "php:8.0-ubi8"
+        type: Source
+    resources:
+      limits:
+        ephemeral-storage: 4Gi
+      requests:
+        ephemeral-storage: 512Mi          
+          #parameters:
+          #- name: APP
+          #  displayName: ocpdemo
+          #  description: Unique name to give this instance to the spring boot application
+          #  required: true
+          #- name: ProjName
+          #  displayName: Proj Name
+          #  description: Project name
+          #  required: true
+          #- name: registry-nonprod
+          #  displayName: "Container Registry"
+          #  description: Set this to container registry where builds will push images to, and deployments will pull images from
+          #  required: true
+          #- name: TAG
+          #  displayName: 1.0
+          #  description: Release Tag
+          #  required: true
+          #- name: IMG
+          #  displayName: ocpdemo
+          #  description: Spring boot OCP demo
+          #  required: true
+          #- name: AIT
+          #  displayName: "AIT NAME"
+          #  description: Set this to AIT where bulds will push images to, and deployments will pull images from
+          #  required: true

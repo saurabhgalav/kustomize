@@ -1,4 +1,4 @@
 bases:
 - ../../base
 patches:
-- replica.yaml  
+  - path: replica.yaml  
